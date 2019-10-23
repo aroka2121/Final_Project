@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Ստեպանակերտ</h1>
+            </tr>
+            <tr>
+                <h1>Արայիկ Գասպարյան</h1>
+            </tr>
+            <tr>
+                <td>Exanak</td>
+                <td id="weather"></td>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+                <th scope="col">Ծնվել է</th>
+                <th scope="col">Այս պահին կա</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Կանաչ - խոտ,  տարածվում է  մոտակա  վանդակներում:</td>
+                <td id="grassCount"></td>
+                <td id="grassLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:yellow;"></td>
+                <td>Դեղին - խոտակեր, ապրում է խոտ ուտելով, բազմանում 55 անգամ անընդմեջ խոտ ուտելով և մեռնում 50 անգամ անընդմեջ չուտելուց, շարժվում է տարբեր ուղղություններով :</td>
+                <td id="grassEaterCount"></td>
+                <td id="grassEaterLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Կարմի - գիշատիչ , ուտում է  ցեխին, խոտին, խոտակերին ,բազմանում 75 անգամ անընդմեջ խոտակերին ուտելով և մեռնում 100 անգամ անընդմեջ չուտելուց, շարժվում է տարբեր ուղղություններով :</td>
+                <td id="predatorCount"></td>
+                <td id="predatorLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:black;"></td>
+                <td>Սև - մարդ , նրանք չեն բազմանում և չեն մահանում ,ուտում է միայն  գիշատչին , շարժվում են տարբեր ուղղություններով:</td>
+                <td id="draCount"></td>
+                <td id="draLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:brown;"></td>
+                <td>Շականակագույն - ցեխ,նրանք բազմանում են խոտի պես , ցեխի վրա չեն կարողանում շարժվել խոտակերը , մարդը և խոտը` խոտակերը մնալով ցեղի մեջ դառնում է անշարժ և ժամանակի ընթացքում մահանում է ,մարդը մնալով ցեխի մեջ դառնում է անշարժ իսկ խոտը չի տարածվում։
+                    </td>
+                <td id="hoxCount"></td>
+                <td id="hoxLiveCount"></td> 
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td scope="row" style="background-color:darkblue;"></td>
+                <td>Մուգ կապույտ - ուտում է ցեղին և չի բազմանում,շարժվում են տարբեր ուղղություններով:
+                    </td>
+                <td id="buldozerCount"></td>
+                <td id="buldozerLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td scope="row" style="background-color:royalblue;"></td>
+                <td>Կապույտ - սառնամանիք բազմանւմ է ինչհպես խոտը նրա մեջ թողնելով մնացած անդամներին բացի` մարդուց և գիշատիչից, խոտը, խոտակերը և գիշատիչը մնալով նարա մեջ ժամանակի ընթացքում մահանում են:
+                    </td>
+                <td id="vakumCount"></td>
+                <td id="vakumLiveCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
